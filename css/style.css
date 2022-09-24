@@ -2,107 +2,223 @@
 *,
 *::before,
 *::after {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
 }
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 ul,
 ol,
 li {
-  list-style: none;
+    list-style: none;
 }
+
 img {
-  vertical-align: top;
+    vertical-align: top;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: inherit;
-  font-size: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
+
 html,
 body {
-  height: 100%;
-  line-height: 1;
-  font-size: 14px;
-  color: #252b42;
-  font-weight: 500;
-  font-family: Montserrat;
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #252b42;
+    font-weight: 500;
+    font-family: Montserrat;
 }
+
+/*----------------*/
 .wrapper {
-  min-height: 100%;
-  overflow: hidden;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
+
 ._container {
-  max-width: 1046px;
-  padding: 0px 15px;
-  margin: 0px auto;
-  box-sizing: content-box;
+    max-width: 1046px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    box-sizing: content-box;
+    /*background-color: aqua;*/
 }
+
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
 /*_________*/
 .header {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 50;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
 }
+
 .header_container {
-  display: flex;
-  min-height: 104px;
-  align-items: center;
+    display: flex;
+    min-height: 104px;
+    align-items: center;
 }
-.header_logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: inherit;
-}
-.header_menu {
-  margin: 0px 0px 0px 133px;
-}
-@media (max-width: 992px) {
-    .header_menu {
-      margin: 0px 0px 0px 80px;
+
+@media (max-width: 479px) {
+    header_container {
+        min-height: 70px;
     }
 }
+
+/*----------------*/
+.header_logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: inherit;
+}
+
+.header_menu {
+    margin: 0px 0px 0px 133px;
+}
+
+@media (max-width: 992px) {
+    .header_menu {
+        margin: 0px 0px 0px 80px;
+    }
+}
+
 @media (max-width: 767px) {
-  .header_menu {
-    margin: 0px 0px 0px 40px;
-  }
+    .header_menu {
+        margin: 0px 0px 0px 40px;
+    }
 }
+
 @media (max-width: 479px) {
-  .header_menu {
-    margin: 0px 0px 0px 20px;
-  }
+    .header_menu {
+        margin: 0px 0px 0px 20px;
+    }
 }
+
 .menu {
 
 }
+
 .menu_list {
-  flex-wrap: wrap;
-  display: flex;
+    flex-wrap: wrap;
+    display: flex;
 }
+
 .menu_item {
- /* margin: 0px 0px 0px 21px;*/
 }
-.menu_item:not(:last-child){
-  margin: 0px 21px 0px 0px;
+
+.menu_item:not(:last-child) {
+    margin: 0px 21px 0px 0px;
 }
-.menu_linc {
-  color: 737373;
-  font-weight: 600;
-  line-height: calc(24/14*100%);
+
+.menu_link {
+    color: #737373;
+    font-weight: 600;
+    line-height: calc(24 / 14 * 100%);
 }
+
 @media (max-width: 479px) {
-  .menu_link {
-    font-size: 18px;
-  }
+    .menu_link {
+        font-size: 18px;
+    }
 }
-/*==============*/
+
+/*=======page=======*/
+.page {
+    flex: 1 1 auto;
+}
+
+.page__main-block {
+}
+
+/*=======повал=======*/
+.footer {
+
+}
+
+/*=======main-block====*/
+.main-block {
+    position: relative;
+}
+
+.main-block__container {
+}
+
+._container {
+}
+
+.main-block__body {
+    padding: 184px 0px 191px 0px;
+    position: relative;
+    z-index: 2;
+    max-width: 509px;
+}
+
+/*------обращаемся к объктам body 1 уровня------*/
+.main-block__body > *:not(:last-child) {
+    margin: 0px 0px 35px 0px;
+}
+
+.main-block__title {
+    font-size: 58px;
+    line-height: calc(80 / 58 * 100%);
+    font-weight: 800;
+}
+
+.main-block__text {
+    color: #737373;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.main-block__buttons {
+    display: inline-flex;
+}
+
+.main-block__button {
+    background: #FF7B47;
+    border-radius: 37px;
+}
+
+.main-block__button_border {
+}
+
+.main-block__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 1300px) {
+    .main-block__img img {
+        object-position: right;
+    }
+}
